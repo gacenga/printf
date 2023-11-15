@@ -18,7 +18,7 @@ if (format == NULL)
 return (-1);
 while (*format)
 {
-if (format != '%')
+if (*format != '%')
 {
 _putchar(*format);
 j++;
@@ -28,21 +28,22 @@ else
 format++;
 if (*format == '%')
 {
-print_37(void);
+_putchar('%');
 j++;
 }
 else if (*format == 'c')
 {
-print_c(va_list args);
+_putchar(va_arg(args, int));
 j++;
 }
 else if (*format == 's')
 {
-str = va_arg(args, char*);
-for (i = 0; *str != '\0'; i++)
-;
-j = i;
-print_s(va_list args);
+ptr = va_arg(args, char*);
+for (i = 0; ptr[i] != '\0'; i++)
+{
+_putchar(ptr[i]);
+j++;
+}
 }
 }
 format++;
