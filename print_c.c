@@ -8,8 +8,8 @@
 */
 int print_c(va_list prc)
 {
-  char pstr;
-  pstr = va_arg(prc, int);
-  _putchar(pstr);
-  return(1);
+char pstr;
+pstr = va_arg(prc, int);
+_putchar(pstr);
+return(1);
 }

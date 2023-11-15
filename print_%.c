@@ -7,6 +7,6 @@
 */
 int print_37(void)
 {
-  _putchar(37);
-  return(i);
+_putchar(37);
+return(i);
 }
