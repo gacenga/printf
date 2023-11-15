@@ -13,6 +13,7 @@ int _printf(const char *format, ...)
 va_list args;
 int i = 0;
 int j = 0;
+int num;
 char *ptr;
 va_start(args, format);
 if (format == NULL)
@@ -45,6 +46,17 @@ for (i = 0; ptr[i] != '\0'; i++)
 _putchar(ptr[i]);
 j++;
 }
+}
+else if (*format == 'd' || *format == 'i')
+{
+int num = va_arg(args, int);
+if (num < 0)
+{
+_putchar('-');
+j++;
+num = -num;
+}
+j += print_number(num);
 }
 }
 format++;
