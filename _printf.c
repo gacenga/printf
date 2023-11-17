@@ -21,10 +21,8 @@ return (-1);
 while (*format)
 {
 if (*format != '%')
-{
 _putchar(*format);
 j++;
-}
 else
 {
 format++;
@@ -46,17 +44,6 @@ for (i = 0; ptr[i] != '\0'; i++)
 _putchar(ptr[i]);
 j++;
 }
-}
-else if (*format == 'd' || *format == 'i')
-{
-int num = va_arg(args, int);
-if (num < 0)
-{
-_putchar('-');
-j++;
-num = -num;
-}
-j += print_number(num);
 }
 }
 format++;
