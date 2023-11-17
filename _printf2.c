@@ -20,8 +20,10 @@ return (-1);
 while (*format)
 {
 if (*format != '%')
+{
 _putchar(*format);
 j++;
+}
 else
 {
 format++;
