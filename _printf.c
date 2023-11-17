@@ -13,7 +13,6 @@ int _printf(const char *format, ...)
 va_list args;
 int i = 0;
 int j = 0;
-int num;
 char *ptr;
 va_start(args, format);
 if (format == NULL)
@@ -21,8 +20,10 @@ return (-1);
 while (*format)
 {
 if (*format != '%')
+{
 _putchar(*format);
 j++;
+}
 else
 {
 format++;
