@@ -8,12 +8,10 @@
 * @...:arguments
 * Return:number of characters printed
 */
-int _printf(const char *format, ...)
+int _printf2(const char *format, ...)
 {
 va_list args;
-int i = 0;
 int j = 0;
-int num;
 va_start(args, format);
 if (format == NULL)
 return (-1);
